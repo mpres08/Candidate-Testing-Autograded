@@ -23,11 +23,11 @@ let questions = [
   "What is the minimum crew size for the ISS? "];
 let correctAnswers = [
   "Sally Ride",
-  " true",
-  " 40",
-  " Trajectory",
-  " 3"];
-let candidateAnswers = [];
+  "true",
+  "40",
+  "Trajectory",
+  "3"];
+let candidateAnswers = []
 
 
 function askForName() {
@@ -43,7 +43,7 @@ function askQuestion() {
 let questionsLength = questions.length;
 for(let i = 0; i < questionsLength; i++) {
   console.log(questions[i])
-  candidateAnswer = input.question();
+  candidateAnswers = input.question();
 }
 } 
 
