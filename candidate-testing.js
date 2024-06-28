@@ -33,7 +33,6 @@ let candidateAnswers = []
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 
-const input = require('readline-sync');
 candidateName = input.question("Please enter your name: ");
 }
 
@@ -42,8 +41,8 @@ function askQuestion() {
 
 let questionsLength = questions.length;
 for(let i = 0; i < questionsLength; i++) {
-  console.log(questions[i])
-  candidateAnswers = input.question();
+  let answer = input.question(questions[i])
+  candidateAnswers.push(answer);
 }
 } 
 
