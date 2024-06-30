@@ -49,13 +49,23 @@ for(let i = 0; i < questionsLength; i++) {
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-console.log(`Your answers: ${candidateAnswers} Correct answer: ${correctAnswers}`);
+console.log(`Your answers: ${candidateAnswers}`);
+console.log(`Correct answer: ${correctAnswers}`);
 
+  //TODO 3.2 use this variable to calculate the candidates score.
+  let points = 0;
+  let totalPoints = [];
+for (let i = 0; i < candidateAnswers.length; i ++) {
+  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+    points += 1;
+  } else {
+    points += 0;
+  }
+}
+ totalPoints.push(points);
 
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-
-  return grade;
+let candidateScore = (points / questions.length) * 100;
+console.log(`Your score: ${candidateScore}%`);
 }
 
 function runProgram() {
