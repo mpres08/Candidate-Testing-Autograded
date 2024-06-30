@@ -71,6 +71,7 @@ if (grade >= 80) {
 } else {
   console.log("You failed the quiz, please try again.");
 }
+return grade;
 }
 
 function runProgram() {
