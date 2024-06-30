@@ -64,8 +64,13 @@ for (let i = 0; i < candidateAnswers.length; i ++) {
 }
  totalPoints.push(points);
 
-let candidateScore = (points / questions.length) * 100;
-console.log(`Your score: ${candidateScore}%`);
+let grade = (points / questions.length) * 100;
+console.log(`Your score: ${grade}%`);
+if (grade >= 80) {
+  console.log("Congratulations, you passed!")
+} else {
+  console.log("You failed the quiz, please try again.");
+}
 }
 
 function runProgram() {
